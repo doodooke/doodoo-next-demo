@@ -1,0 +1,30 @@
+{
+  "name": "doodooke2x",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "web:dev": "lerna exec --scope doodoo-plugin-web -- npm run dev",
+    "web:build": "lerna exec --scope doodoo-plugin-web -- npm run build",
+    "web:start": "lerna exec --scope doodoo-plugin-web -- npm run start"
+  },
+  "private": true,
+  "workspaces": [
+    "app/*",
+    "plugin/*"
+  ],
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "doodoo-plugin-baas": "^1.0.2",
+    "doodoo-plugin-mysql": "^1.0.2",
+    "doodoo-plugin-proxy": "^1.0.1",
+    "doodoo-plugin-redis": "^1.0.2",
+    "doodoo.js": "^2.0.0-alpha.8",
+    "glob": "^7.1.3",
+    "koa-cors": "^0.0.16",
+    "lerna": "^3.6.0",
+    "socket.io": "^2.2.0"
+  }
+}
