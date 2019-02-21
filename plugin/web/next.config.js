@@ -11,9 +11,6 @@ module.exports = {
         const modulesDir = path.resolve("../../", global.doodoo ? doodoo.getConf("app.root") : "app");
         config.resolve.alias["private-next-module-pages"] = modulesDir;
 
-        console.log(config);
-        
-
         return config
     }
 };
