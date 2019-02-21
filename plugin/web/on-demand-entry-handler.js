@@ -245,10 +245,12 @@ module.exports = function onDemandEntryHandler(devMiddleware, multiCompiler, {
         const pagePath = modulePagesPaths[0]
         let pageUrl = `/${pagePath.replace(new RegExp(`\\.+(${extensions})$`), '').replace(/\\/g, '/')}`.replace(/\/index$/, '')
         pageUrl = pageUrl === '' ? '/' : pageUrl
+
+        let pageUrls = pageUrl.split("/");
+        pageUrls.splice(2, 1);
+        pageUrl = pageUrls.join("/")
+
         let bundleFile = pageUrl === '/' ? '/index.js' : `${pageUrl}.js`
-        let bundleFiles = bundleFile.split("/");
-        bundleFiles.splice(2, 1);
-        bundleFile = bundleFiles.join("/")
 
         name = path.join('static', buildId, 'pages', bundleFile)
         absolutePagePath = pagePath.startsWith('next/dist/pages') ? require.resolve(pagePath) : path.resolve(modulesDir, pagePath)
