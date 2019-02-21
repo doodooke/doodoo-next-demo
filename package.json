@@ -8,11 +8,6 @@
     "web:build": "lerna exec --scope doodoo-plugin-web -- npm run build",
     "web:start": "lerna exec --scope doodoo-plugin-web -- npm run start"
   },
-  "private": true,
-  "workspaces": [
-    "app/*",
-    "plugin/*"
-  ],
   "keywords": [],
   "author": "",
   "license": "ISC",

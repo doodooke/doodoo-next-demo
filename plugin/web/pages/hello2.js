@@ -1,1 +1,1 @@
-export default () => <div>Welcome to hello.js! In plugin web</div>;
+export default () => <div>Welcome to hello2.js! In plugin web</div>;

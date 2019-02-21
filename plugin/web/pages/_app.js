@@ -2,7 +2,7 @@ import App, { Container } from "next/app";
 import React from "react";
 
 // 引入zent样式
-import "zent/css/index.css";
+// import "zent/css/index.css";
 
 export default class MyApp extends App {
     static async getInitialProps({ Component, router, ctx }) {
